@@ -1,4 +1,8 @@
 import React from 'react'
+import  AppBar  from '@material-ui/core/Button'
+import  Menu  from '@material-ui/core/Button'
+import  Card  from '@material-ui/core/Button'
+import  Paper  from '@material-ui/core/Button'
 
 import Players from "./Players.js";
 import AddPlayer from "./AddPlayer.js"
@@ -34,9 +38,17 @@ class Leaderboard extends React.Component {
 
     return (
       <div style={style}>
-        <h1>Multiplayer Gundu</h1>
+        <Paper><h1>Multiplayer Gundu</h1></Paper>
+        <AppBar>
+          <Menu>
+            <Card>
+        
         <Players members={this.state.members} />
         <AddPlayer onAdd={this.onPlayerAdd.bind(this)} />
+            </Card>
+          </Menu>
+        </AppBar>
+        
       </div>
     )
   }

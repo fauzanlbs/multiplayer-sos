@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '@material-ui/core/Button';
 
 class AddPlayer extends React.Component {
   constructor(props) {
@@ -39,7 +40,8 @@ class AddPlayer extends React.Component {
     return (
       <div style={style}>
         <input type="text" placeholder="Tambah pemain .." onChange={this.onPlayerChange} value={this.state.name} style={inputStyle} />
-        <button style={buttonStyle} onClick={this.addPlayer}>Tambah</button>
+        <Button  onClick={this.addPlayer}>Tambah</Button>
+       
       </div>
     )
   }
